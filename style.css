@@ -1,0 +1,35 @@
+/* General Styles */
+:root {
+    --primary-color: #007bff;
+    --dark-text: #333;
+    --light-bg: #f9f9f9;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: var(--dark-text); }
+
+.container { max-width: 1100px; margin: auto; padding: 0 20px; }
+
+/* Navigation */
+header { background: #591e1e; border-bottom: 1px solid #ddd; padding: 15px 0; position: sticky; top: 0; z-index: 100; }
+
+nav { display: flex; justify-content: space-between; align-items: center; }
+
+.logo { font-size: 1.5rem; font-weight: bold; }
+.logo span { color: var(--primary-color); }
+
+.nav-links { display: flex; list-style: none; }
+.nav-links li a { text-decoration: none; color: var(--dark-text); padding: 5px 15px; transition: 0.3s; }
+.nav-links li a:hover, .nav-links li a.active { color: var(--primary-color); }
+
+/* Hero Section */
+.hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+
+.btn { background: var(--primary-color); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+
+/* Responsive (Mobile) */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Hide for hamburger logic */
+    .hero h1 { font-size: 1.8rem; }
+}
